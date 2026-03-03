@@ -1,0 +1,12 @@
+Phase 1:
+The first phase no longer removes all left children to create a right-skewed vine,
+it creates a partially left-skewed vine which rotates left instead of right.
+It also leaves small subtrees alone.
+
+Phase 2:
+The new second phase doesn't fully compute the optimized height, which leads to fewer rotations but an
+imperfect and slightly assymetrical tree. It's also faster to rebuild.
+
+Tradeoffs:
+Fewer rotations with a faster program overall, and keeps the structure of the original tree a little better
+But the height can get a lot bigger and there is no guarantee that the tree will be perfect
