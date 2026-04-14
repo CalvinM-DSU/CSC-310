@@ -1,0 +1,272 @@
+Chaining had stable performance across the datasets and seems to be the most reliable,
+    was even comparable to the std::unordered_map
+
+Linear probing kind of broke down when faced with high collisions
+
+Quadratic probing was more stable than Linear, though still not as great as Chaining
+
+Double Hashing was again better than Linear, though worse than Quadratic
+
+Chaining was hardly affected by high levels of collision. Quadratic probing and double
+    hashing were slightly affected, but linear probing was heavily impacted.
+
+========================================
+Benchmarking with data from: data/no_collision_data.txt
+========================================
+
+----------------------------------------
+Running benchmark for method: 0
+----------------------------------------
+Insertion time: 32864 microseconds
+Search time: 20323 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 0
+Total elements: 0
+Load factor: 0
+Empty buckets: 100003
+Max chain length: 0
+
+----------------------------------------
+Running benchmark for method: 1
+----------------------------------------
+Insertion time: 65955 microseconds
+Search time: 47799 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 1
+Total elements: 100000
+Load factor: 0.99997
+Empty buckets: 36987
+Max chain length: 7
+
+----------------------------------------
+Running benchmark for method: 2
+----------------------------------------
+Insertion time: 65648 microseconds
+Search time: 30051 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 2
+Total elements: 100000
+Load factor: 0.99997
+Empty buckets: 36987
+Max chain length: 7
+
+----------------------------------------
+Running benchmark for method: 3
+----------------------------------------
+Insertion time: 148942 microseconds
+Search time: 31551 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 3
+Total elements: 100000
+Load factor: 0.499985
+Empty buckets: 100006
+
+----------------------------------------
+Running benchmark for method: 4
+----------------------------------------
+Insertion time: 157934 microseconds
+Search time: 32857 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 4
+Total elements: 100000
+Load factor: 0.499985
+Empty buckets: 100006
+
+----------------------------------------
+Running benchmark for method: 5
+----------------------------------------
+Insertion time: 181287 microseconds
+Search time: 52499 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 5
+Total elements: 100000
+Load factor: 0.499985
+Empty buckets: 100006
+
+----------------------------------------
+Running benchmark for std::unordered_map
+----------------------------------------
+std::unordered_map Benchmark Results:
+Insertion time: 55342 microseconds
+Search time: 51922 microseconds
+Deletion time: 0 microseconds
+
+========================================
+Benchmarking with data from: data/low_collision_data.txt
+========================================
+
+----------------------------------------
+Running benchmark for method: 0
+----------------------------------------
+Insertion time: 29299 microseconds
+Search time: 23202 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 0
+Total elements: 0
+Load factor: 0
+Empty buckets: 100003
+Max chain length: 0
+
+----------------------------------------
+Running benchmark for method: 1
+----------------------------------------
+Insertion time: 69594 microseconds
+Search time: 43129 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 1
+Total elements: 100000
+Load factor: 0.99997
+Empty buckets: 36788
+Max chain length: 8
+
+----------------------------------------
+Running benchmark for method: 2
+----------------------------------------
+Insertion time: 71361 microseconds
+Search time: 36111 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 2
+Total elements: 100000
+Load factor: 0.99997
+Empty buckets: 36788
+Max chain length: 8
+
+----------------------------------------
+Running benchmark for method: 3
+----------------------------------------
+Insertion time: 171530 microseconds
+Search time: 29774 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 3
+Total elements: 100000
+Load factor: 0.499985
+Empty buckets: 100006
+
+----------------------------------------
+Running benchmark for method: 4
+----------------------------------------
+Insertion time: 118815 microseconds
+Search time: 32189 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 4
+Total elements: 100000
+Load factor: 0.499985
+Empty buckets: 100006
+
+----------------------------------------
+Running benchmark for method: 5
+----------------------------------------
+Insertion time: 208679 microseconds
+Search time: 50373 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 5
+Total elements: 100000
+Load factor: 0.499985
+Empty buckets: 100006
+
+----------------------------------------
+Running benchmark for std::unordered_map
+----------------------------------------
+std::unordered_map Benchmark Results:
+Insertion time: 61345 microseconds
+Search time: 51405 microseconds
+Deletion time: 0 microseconds
+
+========================================
+Benchmarking with data from: data/high_collision_data.txt
+========================================
+
+----------------------------------------
+Running benchmark for method: 0
+----------------------------------------
+Insertion time: 29003 microseconds
+Search time: 24032 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 0
+Total elements: 0
+Load factor: 0
+Empty buckets: 100003
+Max chain length: 0
+
+----------------------------------------
+Running benchmark for method: 1
+----------------------------------------
+Insertion time: 54725 microseconds
+Search time: 48888 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 1
+Total elements: 100000
+Load factor: 0.99997
+Empty buckets: 36477
+Max chain length: 7
+
+----------------------------------------
+Running benchmark for method: 2
+----------------------------------------
+Insertion time: 51798 microseconds
+Search time: 31970 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 2
+Total elements: 100000
+Load factor: 0.99997
+Empty buckets: 36477
+Max chain length: 7
+
+----------------------------------------
+Running benchmark for method: 3
+----------------------------------------
+Insertion time: 498257 microseconds
+Search time: 130574 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 3
+Total elements: 100000
+Load factor: 0.499985
+Empty buckets: 100006
+
+----------------------------------------
+Running benchmark for method: 4
+----------------------------------------
+Insertion time: 124340 microseconds
+Search time: 42271 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 4
+Total elements: 100000
+Load factor: 0.499985
+Empty buckets: 100006
+
+----------------------------------------
+Running benchmark for method: 5
+----------------------------------------
+Insertion time: 154163 microseconds
+Search time: 52971 microseconds
+Deletion time: 0 microseconds
+
+Statistics for method: 5
+Total elements: 100000
+Load factor: 0.499985
+Empty buckets: 100006
+
+----------------------------------------
+Running benchmark for std::unordered_map
+----------------------------------------
+std::unordered_map Benchmark Results:
+Insertion time: 65199 microseconds
+Search time: 60441 microseconds
+Deletion time: 0 microseconds
